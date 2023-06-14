@@ -1,0 +1,7 @@
+{
+  "name": "Finpay",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
