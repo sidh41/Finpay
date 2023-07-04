@@ -1,0 +1,44 @@
+<ion-card class="quickTransfer">
+  <ion-card-header>
+    <ion-card-subtitle>Quick Transfer</ion-card-subtitle>
+    <!-- <ion-card-title>Title</ion-card-title> -->
+  </ion-card-header>
+  <ion-card-content>
+    <ion-buttons slot="start">
+      <ion-button fill="outline" color="primary">
+        Via Mobile No.
+      </ion-button>
+      <ion-button fill="clear" color="dark">
+        Via Account No.
+      </ion-button>
+    </ion-buttons>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="3" size-sm="2" size-md="3" size-lg="3">
+        <ion-label class="c-code"><ion-img class="flag" src="https://shorturl.at/arGX7"></ion-img> +91</ion-label>
+      </ion-col>
+      <ion-col size="7" size-sm="8" size-md="7" size-lg="7">
+        <ion-input class="mob" placeholder="Enter Mobile No." value="87548 751003" aria-label="Mobile No."></ion-input>
+      </ion-col>
+      <ion-col size="2" size-sm="2" size-md="2" size-lg="2">
+        <ion-avatar>
+          <img src="https://shorturl.at/dfJX8" />
+        </ion-avatar>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="1" size-sm="1" size-md="1" size-lg="1">
+        <ion-label class="c-sign">₹</ion-label>
+      </ion-col>
+      <ion-col size="9" size-sm="9" size-md="9" size-lg="9">
+      <ion-input class="amount" placeholder="Enter Amount" value="32,500.00" aria-label="Amount"></ion-input>
+      </ion-col>
+      <ion-col size="2" size-sm="2" size-md="2" size-lg="2" class="ion-text-right">
+        <ion-label class="currency">INR</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-button expand="block" fill="solid" color="secondary" mode="ios">
+      Send to john
+    </ion-button>
+    
+  </ion-card-content>
+</ion-card>

@@ -1,0 +1,224 @@
+// @import "swiper/css";
+// @import "swiper/css/effect-cards";
+
+.CommonDashboardPages {
+    ion-header {
+        box-shadow: none;
+        --background: transparent;
+
+        ion-toolbar {
+            --background: transparent;
+        }
+
+        @media (min-width: 992px) {
+            display: none;
+        }
+    }
+
+    ion-content {
+        @media (min-width: 992px) {
+            --padding-start: 32px;
+            --padding-end: 32px;
+        }
+
+        --padding-start: 12px;
+        --padding-end: 12px;
+
+        ion-grid {
+            // --ion-grid-column-padding: 0;
+            // --ion-grid-column-padding-xs: 0;
+            // --ion-grid-column-padding-sm: 0;
+            // --ion-grid-column-padding-md: 8px;
+            // --ion-grid-column-padding-lg: 8px;
+            // --ion-grid-column-padding-xl: 8px;
+        }
+
+        ion-item.title {
+            margin: 0;
+            --inner-padding-top: 12px;
+            --inner-padding-bottom: 12px;
+            --background: transparent;
+            --inner-padding-end: 0px;
+            --padding-start: 8px;
+            --padding-end: 8px;
+
+            ion-label {
+                font-size: 2.7rem;
+                font-weight: 300;
+
+                span {
+                    display: block;
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+            }
+
+            ion-button {
+                --background: var(--ion-color-dark-contrast);
+                background: var(--ion-color-dark-contrast);
+                --border-radius: 16px;
+                border-radius: 16px;
+                --padding-start: 12px;
+                --padding-end: 12px;
+                --padding-top: 12px;
+                --padding-bottom: 12px;
+                height: 44px;
+                width: 44px;
+                margin: 0 16px;
+                --box-shadow: rgb(38 57 77 / 30%) 0px 6px 30px -14px;
+                box-shadow: rgb(38 57 77 / 30%) 0px 6px 30px -14px;
+
+                ion-icon {
+                    font-size: 64px;
+                    color: var(--ion-color-dark);
+                }
+            }
+        }
+    }
+}
+
+ion-card.cards {
+    background: var(--ion-color-dark-contrast);
+    border-radius: 16px;
+    padding: 8px;
+    margin: 10px 0;
+    // box-shadow: none;    
+
+    ion-card-subtitle {
+        text-transform: uppercase;
+        color: var(--ion-color-medium-tint);
+        font-weight: 700;
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+    }
+
+    ion-card-content {
+        padding: 0 16px 6px;
+    }
+}
+
+#heroSlider {
+    .swiper {
+        .swiper-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .swiper-pagination {
+            bottom: 0px;
+            top: 232px;
+
+            .swiper-pagination-bullet {
+                height: 4px;
+                width: 16px;
+                margin: 0 6px;
+                border-radius: 16px;
+                background: var(--ion-color-medium-shade) !important;
+                transition: all .5s cubic-bezier(.075, .82, .165, 1) 0s;
+            }
+
+            .swiper-pagination-bullet-active {
+                width: 50px;
+            }
+        }
+
+        .swiper-slide {
+            margin: 10px 0 0;
+            text-align: left;
+            transition: all .4s cubic-bezier(.075, .82, .165, 1) 0s;
+            height: 252px;
+
+            &.swiper-slide-active {
+                transform: scale(1.05);
+                opacity: 1;
+                .card {
+                    height: 200px;
+                    max-height: 200px;
+                }
+            }
+            &.swiper-slide-next, &.swiper-slide-prev
+            {
+                opacity: 0.5;
+            }
+            // &.swiper-slide-prev
+            // {
+            //     transform: translate(97%);
+            // }
+            // &.swiper-slide-next
+            // {
+            //     transform: translate(-97%);
+            //     z-index: -1;
+            // }
+        }
+
+        .swiper-slide:first-of-type .card {
+            margin-left: 0px !important;
+        }
+
+        .swiper-slide:last-of-type .card {
+            margin-right: 0px !important;
+        }
+
+        .swiper-slide .card {
+            margin: 4px 0px 48px !important;
+        }
+
+        .card {
+            --background: -webkit-linear-gradient(120deg, #4b2e8b 0%, #476ccc 120%);
+            /* Chrome 10-25, Safari 5.1-6 */
+            --background: linear-gradient(120deg, #4b2e8b 0%, #476ccc 120%);
+            box-shadow: rgb(73 78 173 / 15%) 0px 12px 30px;
+            border-radius: 16px;
+            margin: 0px;
+            height: 180px;
+            transition: all .4s cubic-bezier(.075, .82, .165, 1) 0s;
+
+            ion-card-header {
+                padding: 8px 22px 0;
+
+                ion-img {
+                    width: 70px;
+                }
+            }
+
+            ion-card-content {
+                padding: 0px 16px 0 22px;
+
+                .number {
+                    span {
+                        margin-right: 8px;
+                        color: #fff;
+                        font-size: 1.35rem;
+                        letter-spacing: 1.5px;
+                    }
+                }
+
+                ion-text {
+                    display: inline-grid;
+                    margin-right: 22px;
+                    font-weight: 500;
+                    padding: 16px 0;
+
+                    
+
+                    h1 {
+                        color: #fff;
+                        font-size: 1rem;
+                        letter-spacing: 1px;
+                        margin: 5px 0;
+                    }
+
+                    h6 {
+                        color: #cbcbcb;
+                        font-size: 0.75rem;
+                        letter-spacing: 0.75px;
+                    }
+                    &.expiry
+                    {
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+}

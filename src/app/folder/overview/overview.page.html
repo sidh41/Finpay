@@ -1,0 +1,143 @@
+<div class="ion-page CommonDashboardPages" id="main-content">
+   <ion-header>
+      <ion-toolbar>
+         <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+         </ion-buttons>
+         <ion-title>Overview</ion-title>
+      </ion-toolbar>
+   </ion-header>
+
+   <ion-content>
+      <ion-grid>
+         <ion-row>
+            <ion-col size="12">
+               <ion-item class="title" lines="none">
+                  <ion-label>Overview <span>Hi Aaron, welcome back!</span>
+                  </ion-label>
+                  <ion-buttons slot="end">
+                     <ion-button>
+                        <ion-icon name="search"></ion-icon>
+                     </ion-button>
+                     <ion-button>
+                        <ion-icon name="notifications"></ion-icon>
+                     </ion-button>
+                  </ion-buttons>
+               </ion-item>
+            </ion-col>
+         </ion-row>
+         <ion-row>
+            <ion-col size="12" size-sm="12" size-md="6" size-lg="6">
+               <ion-row>
+                  <ion-col size="12">
+                     <app-balance></app-balance>
+                  </ion-col>
+                  <ion-col size="12">
+                     <app-transactions></app-transactions>
+                  </ion-col>
+               </ion-row>
+            </ion-col>
+            <ion-col size="12" size-sm="12" size-md="6" size-lg="6">
+               <ion-row>
+                  <ion-col size="12">
+                     <app-transfer></app-transfer>
+                  </ion-col>
+                  <ion-col size="12">
+                     <ion-card class="cards">
+                        <ion-card-header>
+                          <ion-card-subtitle>Your Cards</ion-card-subtitle>
+                          <!-- <ion-card-title>Title</ion-card-title> -->
+                        </ion-card-header>
+                        <ion-card-content>
+                           <div id="heroSlider">
+                              <swiper class="mySwiper" [slidesPerView]="1.2" [initialSlide]="0" [freeMode]="true"
+                                 [cssMode]="false" [autoplay]="true" [centeredSlides]="true" [spaceBetween]="18"
+                                 [keyboard]="false" [pagination]="true" [scrollbar]="false" [zoom]="false"
+                                 [breakpoints]="{ '640': { slidesPerView: 1.2, spaceBetween: 32 }, '768': { slidesPerView: 1.2, spaceBetween: 16 }, '1024': { slidesPerView: 1.2, spaceBetween: 16 } }">
+                                 <ng-template swiperSlide>
+                                    <ion-card class="card">
+                                       <ion-card-header>
+                                          <ion-img src="../../assets/icon/visa.png"></ion-img>
+                                       </ion-card-header>
+                                       <ion-card-content>
+      
+                                          <ion-label class="number">
+                                             <span>****</span>
+                                             <span>****</span>
+                                             <span>****</span>
+                                             <span>1234</span>
+                                          </ion-label>
+                                          <ion-text>
+                                             <h6>Card Holder Name</h6>
+                                             <h1>Aaron Green</h1>
+                                          </ion-text>
+                                          <ion-text class="expiry">
+                                             <h6>Expiry Date</h6>
+                                             <h1>06/27</h1>
+                                          </ion-text>
+                                       </ion-card-content>
+                                    </ion-card>
+                                 </ng-template>
+                                 <ng-template swiperSlide>
+                                    <ion-card class="card">
+                                       <ion-card-header>
+                                          <ion-img
+                                             src="https://www.freepnglogos.com/uploads/mastercard-png/mastercard-logo-mastercard-logo-png-vector-download-19.png"></ion-img>
+                                       </ion-card-header>
+                                       <ion-card-content>
+      
+                                          <ion-label class="number">
+                                             <span>****</span>
+                                             <span>****</span>
+                                             <span>****</span>
+                                             <span>7847</span>
+                                          </ion-label>
+                                          <ion-text>
+                                             <h6>Card Holder Name</h6>
+                                             <h1>Aaron Green</h1>
+                                          </ion-text>
+                                          <ion-text class="expiry">
+                                             <h6>Expiry Date</h6>
+                                             <h1>06/27</h1>
+                                          </ion-text>
+                                       </ion-card-content>
+                                    </ion-card>
+                                 </ng-template>
+                                 <ng-template swiperSlide>
+                                    <ion-card class="card">
+                                       <ion-card-header>
+                                          <ion-img src="../../assets/icon/visa.png"></ion-img>
+                                       </ion-card-header>
+                                       <ion-card-content>
+      
+                                          <ion-label class="number">
+                                             <span>****</span>
+                                             <span>****</span>
+                                             <span>****</span>
+                                             <span>1234</span>
+                                          </ion-label>
+                                          <ion-text>
+                                             <h6>Card Holder Name</h6>
+                                             <h1>Aaron Green</h1>
+                                          </ion-text>
+                                          <ion-text class="expiry">
+                                             <h6>Expiry Date</h6>
+                                             <h1>06/27</h1>
+                                          </ion-text>
+                                       </ion-card-content>
+                                    </ion-card>
+                                 </ng-template>
+                              </swiper>
+                           </div>
+                        </ion-card-content>
+                      </ion-card>
+                     
+                     <!-- <app-card></app-card> -->
+                  </ion-col>
+               </ion-row>
+            </ion-col>
+         </ion-row>
+      </ion-grid>
+
+   </ion-content>
+</div>

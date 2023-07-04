@@ -1,0 +1,105 @@
+ion-card.quickTransfer {
+    background: var(--ion-color-dark-contrast);
+    border-radius: 16px;
+    padding: 8px;
+    margin: 0;
+    // box-shadow: none;    
+
+    ion-card-subtitle {
+        text-transform: uppercase;
+        color: var(--ion-color-medium-tint);
+        font-weight: 700;
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+    }
+
+    ion-card-content {
+        padding: 0 16px 16px;
+
+        ion-buttons {
+            padding: 0 0 32px;
+
+            ion-button {
+                height: 50px;
+                width: -webkit-fill-available;
+                --border-radius: 16px;
+                font-weight: 600;
+                --border-width: 1px;
+            }
+        }
+
+        ion-row {
+            // --padding-start: 0;
+            // --inner-padding-end: 0;
+            --color: var(--ion-color-dark) !important;
+            font-weight: 500;
+            font-size: 1.1rem;
+            letter-spacing: 1.5px;
+            margin: 0 0 8px;
+            padding: 0 0 4px;
+            border-bottom: 1px solid var(--ion-color-light-shade);            
+            &:last-of-type
+            {
+                margin: 0 0 32px !important;
+            }
+            ion-label {
+                width: auto;
+
+                &.currency {
+                    font-weight: 700;
+                    text-align: right;
+                    color: var(--ion-color-dark) !important;
+                    white-space: nowrap;
+                }
+
+                &.c-code {
+                    border-right: 1px solid var(--ion-color-light-shade);
+                    padding-right: 16px;
+                    display: flex;
+                    color: var(--ion-color-dark) !important;
+
+                    @media (min-width: 767px) {
+                        padding-right: 8px;
+                    }
+                }
+
+                &.c-sign {
+                    color: var(--ion-color-dark) !important;
+                }
+            }
+
+            ion-img.flag {
+                height: 26px;
+                width: 26px;
+                margin-right: 8px;
+            }
+
+            ion-input {
+                &.mob {
+                    --padding-start: 8px;
+                    min-height: 40px;
+                    --color: var(--ion-color-dark) !important;
+                }
+
+                &.amount {
+                    text-align: left;
+                    --color: var(--ion-color-dark) !important;
+                    min-height: 40px;
+                }
+            }
+
+            ion-avatar {
+                width: 40px;
+                height: 40px;
+                margin: 0;
+                float: right;
+            }
+        }
+        ion-button
+        {
+            text-transform: uppercase;
+            --border-radius: 16px;
+        }
+    }
+
+}

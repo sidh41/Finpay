@@ -1,0 +1,249 @@
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-label class="title">
+        Order from the best of <b>snacks</b>
+      </ion-label>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button class="menu-btn">
+        <ion-img src="assets/icon/menu.svg"></ion-img>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="12">
+        <div id="types">
+          <ion-segment [(ngModel)]="segment" mode="ios">
+            <ion-segment-button value="1">
+              All
+            </ion-segment-button>
+            <ion-segment-button value="2">
+              <ion-label>
+                <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13.3056 2.50114C13.1078 2.20097 12.9008 1.93108 12.6148 1.70984C12.326 1.48643 12.0005 1.3126 11.6653 1.16993C10.6567 0.740764 9.32495 0.504395 7.9152 0.504395C6.50545 0.504395 5.17366 0.740764 4.1651 1.16996C3.82893 1.31302 3.50249 1.48743 3.21307 1.71179C2.936 1.9266 2.71635 2.21044 2.52478 2.50117C1.39845 4.21092 0.778137 6.40361 0.778137 8.67534V8.6918C0.779614 9.81715 1.49569 10.8401 2.56005 11.2374C3.18714 11.4714 3.8337 11.6639 4.4923 11.8132C4.2126 12.0613 4.06583 12.3485 4.06583 12.6635C4.06583 13.8168 6.00232 14.4203 7.9152 14.4203C9.82808 14.4203 11.7646 13.8168 11.7646 12.6635C11.7646 12.3485 11.6178 12.0614 11.3382 11.8133C11.9968 11.664 12.6432 11.4715 13.2703 11.2374C14.3347 10.8401 15.0508 9.81712 15.0523 8.69127V8.67536C15.0523 6.40361 14.4319 4.21092 13.3056 2.50114ZM4.49238 1.93902C5.39977 1.55287 6.61536 1.34021 7.91517 1.34021C9.21498 1.34021 10.4306 1.55287 11.338 1.93902C12.109 2.26711 12.5692 2.69391 12.5692 3.0807C12.5692 3.6919 11.3929 4.45211 9.40828 4.72236C8.98733 4.042 8.47316 3.67666 7.91514 3.67666C7.35712 3.67666 6.84295 4.042 6.42201 4.72236C4.43738 4.45211 3.26105 3.6919 3.26105 3.0807C3.26111 2.69391 3.72142 2.26711 4.49238 1.93902ZM1.61396 8.69125V8.67534C1.61396 6.96439 1.98966 5.30657 2.68481 3.90105C2.87705 4.19094 3.19928 4.49543 3.72538 4.78042C4.34196 5.11441 5.13184 5.36282 6.03288 5.50911C6.02396 5.53149 6.01499 5.55364 6.00622 5.5764C5.58243 6.67569 5.34904 8.12843 5.34904 9.66704C5.34904 10.169 5.37442 10.6646 5.4241 11.1467C4.54336 10.9955 3.6798 10.7632 2.85231 10.4543C2.11261 10.1782 1.61496 9.4695 1.61396 8.69125ZM10.1897 13.2209C9.58884 13.4553 8.78105 13.5844 7.9152 13.5844C7.04935 13.5844 6.24158 13.4553 5.64068 13.2209C5.05611 12.9928 4.90165 12.7565 4.90165 12.6635C4.90165 12.5221 5.20305 12.2123 6.01182 11.9825C6.21266 11.9255 6.34057 11.7289 6.31143 11.5222C6.22746 10.9268 6.18489 10.3027 6.18489 9.66701C6.18489 7.72248 6.55853 6.23497 7.01391 5.36884C7.01516 5.3665 7.01644 5.36415 7.01764 5.36179C7.30917 4.80998 7.63383 4.51248 7.9152 4.51248C8.1974 4.51248 8.52309 4.81162 8.81529 5.36647C8.81699 5.36967 8.8185 5.37301 8.82028 5.37616C9.27394 6.24333 9.64554 7.72788 9.64554 9.66701C9.64554 10.3027 9.60297 10.9268 9.519 11.5222C9.48985 11.7289 9.61776 11.9255 9.81861 11.9825C10.6273 12.2123 10.9288 12.5221 10.9288 12.6635C10.9287 12.7565 10.7743 12.9928 10.1897 13.2209ZM14.2164 8.69072C14.2154 9.4695 13.7178 10.1782 12.9781 10.4543C12.1505 10.7632 11.2871 10.9955 10.4063 11.1467C10.456 10.6647 10.4813 10.169 10.4813 9.66701C10.4813 8.12841 10.2479 6.67567 9.82415 5.57637C9.81538 5.55361 9.80641 5.53146 9.79749 5.50909C10.6985 5.36282 11.4884 5.11441 12.1049 4.78042C12.6311 4.49543 12.9533 4.19094 13.1456 3.90105C13.8407 5.30657 14.2164 6.96436 14.2164 8.67534V8.69072H14.2164Z" />
+                </svg>
+                <span>Choco</span>
+              </ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="3">
+              <ion-label>
+                <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.5924 2.30683C14.433 1.38059 12.8798 0.849365 11.3309 0.849365C9.63342 0.849365 8.24792 1.51907 7.09535 2.89673C6.53963 3.56098 6.0818 4.3419 5.68064 5.13839C3.45513 5.21782 2.11928 6.12018 1.38167 6.88267C0.483121 7.81157 0.0808716 8.93791 0.0808716 9.64209C0.0808716 10.1371 0.133006 10.6944 0.519854 11.0748C0.909359 11.4577 1.48566 11.5094 1.99801 11.5094C1.99872 11.5094 1.9994 11.5094 2.00015 11.5094C2.07784 11.5093 2.15451 11.5058 2.23029 11.4989C2.85958 11.4454 3.65069 11.1933 4.48269 10.9283C5.4411 10.6229 6.43216 10.3072 7.13269 10.3072C8.26271 10.3072 8.96638 10.4711 9.71142 10.6447C10.4183 10.8093 11.1493 10.9796 12.2072 10.9796C12.9705 10.9796 14.4365 10.8475 15.6796 9.9629C16.8882 9.10293 17.527 7.76288 17.527 6.08771C17.527 4.64625 16.8399 3.30351 15.5924 2.30683ZM2.02639 10.4869C2.01831 10.487 2.01061 10.4884 2.00233 10.4871C2.00165 10.4871 2.00111 10.4871 2.00043 10.4871C1.99961 10.4871 1.99879 10.4871 1.99801 10.4871C1.48743 10.4871 1.3021 10.4103 1.23651 10.3459C1.14798 10.2588 1.10311 10.0221 1.10311 9.64209C1.10311 9.2396 1.37298 8.36191 2.11642 7.59336C2.6613 7.03014 3.61447 6.37404 5.17627 6.19944C5.07098 6.43128 4.96896 6.66064 4.86919 6.88492C4.01583 8.80331 3.27791 10.4621 2.02639 10.4869ZM12.2072 9.95745C11.2667 9.95745 10.6239 9.80769 9.9433 9.64914C9.17482 9.47012 8.3802 9.28499 7.13269 9.28499C6.37144 9.28499 5.44652 9.55196 4.52736 9.84163C4.99254 9.1229 5.3877 8.2345 5.80321 7.30039C6.01243 6.83009 6.22291 6.35686 6.4447 5.89652C6.45601 5.87665 6.46603 5.856 6.47465 5.8346C7.50642 3.70863 8.79127 1.87157 11.331 1.87157C13.8296 1.87153 16.5048 3.56572 16.5048 6.08771C16.5048 9.77086 12.9249 9.95745 12.2072 9.95745Z"
+                    fill="black" />
+                  <path
+                    d="M10.7768 6.64059C10.6818 6.54552 10.5502 6.49097 10.4156 6.49097C10.281 6.49097 10.1492 6.54552 10.0541 6.64059C9.95903 6.73566 9.90448 6.86752 9.90448 7.00208C9.90448 7.13668 9.95903 7.26855 10.0541 7.36361C10.1492 7.45868 10.281 7.5132 10.4156 7.5132C10.5502 7.5132 10.6818 7.45868 10.7768 7.36361C10.8722 7.26855 10.9267 7.13668 10.9267 7.00208C10.9267 6.86752 10.8722 6.736 10.7768 6.64059Z"
+                    fill="black" />
+                  <path
+                    d="M13.1857 4.7116C13.0906 4.6165 12.9588 4.56201 12.8242 4.56201C12.6896 4.56201 12.558 4.61653 12.4626 4.7116C12.3676 4.80704 12.313 4.93854 12.313 5.07313C12.313 5.20772 12.3676 5.33959 12.4626 5.43466C12.558 5.52973 12.6899 5.58425 12.8242 5.58425C12.9588 5.58425 13.0903 5.52973 13.1857 5.43466C13.2807 5.33922 13.3353 5.20772 13.3353 5.07313C13.3353 4.93884 13.2807 4.80701 13.1857 4.7116Z" />
+                </svg>
+                <span>Chips</span>
+              </ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="4">
+              <ion-label>
+                <svg width="18" height="20" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                  style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                  <g>
+                    <g>
+                      <path
+                        d="M256,140.017c-25.322,0-49.383,8.016-69.58,23.181c-19.524,14.66-34.198,35.525-41.324,58.753 c-1.692,5.517,1.41,11.362,6.926,13.054c1.022,0.313,2.053,0.462,3.068,0.462c4.47,0,8.607-2.892,9.987-7.387 c12.321-40.173,48.86-67.164,90.924-67.164c5.77-0.001,10.448-4.679,10.448-10.45C266.449,144.696,261.77,140.017,256,140.017z" />
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path
+                        d="M150.466,245.548c-5.77,0-10.449,4.679-10.449,10.449v0.137c0,5.77,4.679,10.449,10.449,10.449 c5.77,0,10.449-4.679,10.449-10.449v-0.137C160.915,250.227,156.237,245.548,150.466,245.548z" />
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path
+                        d="M359.978,276.996c-5.523-1.695-11.361,1.41-13.054,6.926c-12.321,40.173-48.86,67.164-90.924,67.164 c-5.77,0-10.449,4.679-10.449,10.449s4.679,10.449,10.449,10.449c25.322,0,49.383-8.016,69.58-23.181 c19.524-14.66,34.198-35.525,41.324-58.753C368.595,284.533,365.494,278.688,359.978,276.996z" />
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path
+                        d="M361.535,245.418c-5.77,0-10.449,4.679-10.449,10.449v0.137c0,5.77,4.679,10.449,10.449,10.449 c5.77,0,10.449-4.679,10.449-10.449v-0.137C371.984,250.097,367.305,245.418,361.535,245.418z" />
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path
+                        d="M508.909,127.181c-9.698-9.698-19.557-11.259-27.479-12.515c-6.564-1.041-10.902-1.727-15.625-6.452 c-4.915-4.915-5.763-9.803-6.934-16.567c-1.354-7.816-3.039-17.543-12.032-26.536c-9.022-9.022-18.891-10.797-26.82-12.224 c-6.751-1.214-11.629-2.092-16.27-6.73c-4.643-4.648-5.521-9.524-6.735-16.274c-1.427-7.931-3.203-17.799-12.224-26.821 c-2.545-2.544-6.219-3.603-9.726-2.795c-3.507,0.805-6.353,3.356-7.534,6.755l-38.353,110.412 C307.32,105.845,282.416,99.266,256,99.266c-86.423,0-156.734,70.311-156.734,156.734c0,26.415,6.579,51.319,18.168,73.176 L7.021,367.529c-3.399,1.181-5.936,4.042-6.741,7.549c-0.805,3.508,0.266,7.196,2.811,9.741 c9.698,9.698,19.557,11.259,27.479,12.515c6.564,1.041,10.902,1.727,15.625,6.452c4.915,4.915,5.763,9.803,6.934,16.567 c1.354,7.816,3.039,17.543,12.032,26.536c9.022,9.022,18.891,10.797,26.82,12.224c6.751,1.214,11.629,2.092,16.27,6.73 c4.643,4.648,5.521,9.524,6.735,16.274c1.427,7.931,3.203,17.799,12.224,26.821c1.981,1.981,4.649,3.06,7.388,3.06 c0.777,0,1.561-0.087,2.336-0.264c3.507-0.806,6.353-3.357,7.534-6.756l38.353-110.412c21.857,11.59,46.761,18.168,73.176,18.168 c86.423,0,156.734-70.311,156.734-156.734c0-26.415-6.579-51.319-18.168-73.176l110.412-38.353 c3.399-1.181,5.936-4.042,6.741-7.549C512.524,133.415,511.453,129.726,508.909,127.181z M400.832,69.17 c5.472,2.473,10.812,3.444,15.486,4.286c6.591,1.186,11.353,2.043,15.743,6.433c4.11,4.11,4.999,8.29,6.217,15.324 c0.835,4.822,1.807,10.348,4.469,16.054l-75.488,34.451c-0.124-0.125-0.246-0.254-0.371-0.379L400.832,69.17z M377.916,40.808 c1.139,4.6,2.911,9.517,6.266,14.385l-33.771,75.783c-1.003-0.76-2.016-1.507-3.038-2.242L377.916,40.808z M55.206,384.171 c-4.987-3.466-9.921-5.18-14.494-6.221l88.022-30.576c0.586,0.814,1.174,1.627,1.776,2.429L55.206,384.171z M111.168,442.831 c-5.472-2.473-10.812-3.444-15.486-4.286c-6.59-1.186-11.353-2.043-15.743-6.433c-4.11-4.11-4.999-8.29-6.217-15.324 c-0.835-4.822-1.807-10.348-4.469-16.054l75.488-34.451c0.124,0.125,0.246,0.254,0.371,0.379L111.168,442.831z M134.085,471.192 c-1.139-4.6-2.911-9.517-6.266-14.385l33.771-75.783c1.003,0.76,2.016,1.507,3.037,2.242L134.085,471.192z M256,391.837 c-74.901,0-135.836-60.935-135.836-135.836S181.099,120.164,256,120.164S391.837,181.099,391.837,256S330.901,391.837,256,391.837 z M383.266,164.626c-0.586-0.814-1.174-1.627-1.776-2.429l75.305-34.367c4.988,3.465,9.922,5.18,14.495,6.221L383.266,164.626z" />
+                    </g>
+                  </g>
+                </svg>
+                <span>Candy</span>
+              </ion-label>
+            </ion-segment-button>
+          </ion-segment>
+          <div [ngSwitch]="segment">
+            <ion-card *ngSwitchCase="'1'" class="ion-no-margin ion-padding-bottom card-bg">
+              <ion-card-header>
+                <a class="title" [routerLink]="['/collections']">All <b>Collections</b> <ion-img
+                    src="assets/icon/arrow-right.svg"></ion-img></a>
+              </ion-card-header>
+              <ion-card-content>
+                <swiper [effect]="'cards'" [grabCursor]="true" class="mySwiper">
+                  <ng-template swiperSlide>
+                    <ion-card class="product pista">
+                      <ion-card-header>
+                        <ion-text>Savory Seaweed</ion-text>
+                        <ion-chip>Chips</ion-chip>
+                      </ion-card-header>
+                      <ion-card-content>
+                        <img class="p-img" src="assets/images/products/d-5.png" />
+                        <div class="action">
+                          <ion-text class="price">$ 08.00</ion-text>
+                            <ion-button>
+                              <ion-img src="assets/icon/bag.svg"></ion-img>
+                            </ion-button> 
+                        </div>
+                      </ion-card-content>
+                    </ion-card>
+                  </ng-template>
+                  <ng-template swiperSlide>
+                    <ion-card class="product yellow">
+                      <ion-card-header>
+                        <ion-text>Unreal Muffins</ion-text>
+                        <ion-chip>Chocolates</ion-chip>
+                      </ion-card-header>
+                      <ion-card-content>
+                        <img class="p-img" src="assets/images/p2.png" />
+                        <div class="action">
+                          <ion-text class="price">$ 06.00</ion-text>
+                            <ion-button>
+                              <ion-img src="assets/icon/bag.svg"></ion-img>
+                            </ion-button> 
+                        </div>
+                      </ion-card-content>
+                    </ion-card>
+                  </ng-template>
+                  <ng-template swiperSlide>
+                    <ion-card class="product green">
+                      <ion-card-header>
+                        <ion-text [routerLink]="['/collections']">Coconut Chips</ion-text>
+                      <ion-chip>Chips</ion-chip>
+                      </ion-card-header>
+                      <ion-card-content>
+                        <img class="p-img" [routerLink]="['/product']" src="assets/images/p3.png" />
+                        <div class="action">
+                          <ion-text class="price">$ 06.00</ion-text>
+                            <ion-button>
+                              <ion-img src="assets/icon/bag.svg"></ion-img>
+                            </ion-button> 
+                        </div>
+                      </ion-card-content>
+                    </ion-card>
+                  </ng-template>
+                </swiper>
+              </ion-card-content>
+            </ion-card>
+            <ion-card *ngSwitchCase="'2'" class="ion-no-margin ion-padding-bottom card-bg">
+              <ion-card-header>
+                <a class="title" [routerLink]="['/collections']">Choco <b>Collections</b> <ion-img
+                    src="assets/icon/arrow-right.svg"></ion-img></a>
+              </ion-card-header>
+            </ion-card>
+            <ion-card *ngSwitchCase="'3'" class="ion-no-margin ion-padding-bottom card-bg">
+              <ion-card-header>
+                <a class="title" [routerLink]="['/collections']">Chips <b>Collections</b> <ion-img
+                    src="assets/icon/arrow-right.svg"></ion-img></a>
+              </ion-card-header>
+              <ion-card-content>
+                <swiper [effect]="'cards'" [grabCursor]="true" class="mySwiper">
+                  <ng-template swiperSlide>
+                    <ion-card class="product brown">
+                      <ion-card-header>
+                        <ion-text>Chocolate Sea Salt</ion-text>
+                      <ion-chip>Chips</ion-chip>
+                      </ion-card-header>
+                      <ion-card-content>
+                        <img class="p-img" src="assets/images/products/d-1.png" />
+                        <div class="action">
+                          <ion-text class="price">$ 08.00</ion-text>
+                            <ion-button>
+                              <ion-img src="assets/icon/bag.svg"></ion-img>
+                            </ion-button> 
+                        </div>
+                      </ion-card-content>
+                    </ion-card>
+                  </ng-template>
+                  <ng-template swiperSlide>
+                    <ion-card class="product blue">
+                      <ion-card-header>
+                        <ion-text>Aged Cheddar</ion-text>
+                      <ion-chip>Chips</ion-chip>
+                      </ion-card-header>
+                      <ion-card-content>
+                        <img class="p-img" src="assets/images/products/d-2.png" />
+                        <div class="action">
+                          <ion-text class="price">$ 08.00</ion-text>
+                            <ion-button>
+                              <ion-img src="assets/icon/bag.svg"></ion-img>
+                            </ion-button> 
+                        </div>
+                      </ion-card-content>
+                    </ion-card>
+                  </ng-template>
+                  <ng-template swiperSlide>
+                    <ion-card class="product red">
+                      <ion-card-header>
+                        <ion-text>Sriracha Spice</ion-text>
+                      <ion-chip>Chips</ion-chip>
+                      </ion-card-header>
+                      <ion-card-content>
+                        <img class="p-img" src="assets/images/products/d-7.png" />
+                        <div class="action">
+                          <ion-text class="price">$ 08.00</ion-text>
+                            <ion-button>
+                              <ion-img src="assets/icon/bag.svg"></ion-img>
+                            </ion-button> 
+                        </div>
+                      </ion-card-content>
+                    </ion-card>
+                  </ng-template>
+                  <ng-template swiperSlide>
+                    <ion-card class="product green">
+                      <ion-card-header>
+                        <ion-text [routerLink]="['/collections']">Coconut Chips</ion-text>
+                      <ion-chip>Chips</ion-chip>
+                      </ion-card-header>
+                      <ion-card-content>
+                        <img class="p-img" [routerLink]="['/product']" src="assets/images/p3.png" />
+                        <div class="action">
+                          <ion-text class="price">$ 06.00</ion-text>
+                            <ion-button>
+                              <ion-img src="assets/icon/bag.svg"></ion-img>
+                            </ion-button> 
+                        </div>
+                      </ion-card-content>
+                    </ion-card>
+                  </ng-template>
+                </swiper>
+              </ion-card-content>
+            </ion-card>
+            <ion-card *ngSwitchCase="'4'" class="ion-no-margin ion-padding-bottom card-bg">
+              <ion-card-header>
+                <a class="title" [routerLink]="['/collections']">Candy <b>Collections</b> <ion-img
+                    src="assets/icon/arrow-right.svg"></ion-img></a>
+              </ion-card-header>
+            </ion-card>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer mode="ios" [translucent]="true">
+  <!-- <app-cart-footer></app-cart-footer> -->
+</ion-footer>

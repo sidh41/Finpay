@@ -1,0 +1,21 @@
+@import "swiper/css";
+@import "swiper/css/effect-cards";
+
+#heroSlider {
+
+    .swiper {
+        width: 90%;
+        height: 334.65px;
+
+        .swiper-slide {
+            border-radius: 45.29px;
+            opacity: .2;
+
+            &.swiper-slide-active,
+            &.swiper-slide-visible {
+                opacity: 1 !important;
+            }
+        }
+    }
+
+}

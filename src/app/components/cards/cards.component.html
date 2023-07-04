@@ -1,0 +1,62 @@
+<ion-grid class="ion-no-padding">
+
+  <ion-row>
+    <ion-col size="12">
+      <div id="heroSlider">
+        <swiper [effect]="'cards'" [grabCursor]="true" class="mySwiper">
+          <ng-template swiperSlide>
+            <ion-card class="product pista">
+              <ion-card-header>
+                <ion-text>Savory Seaweed</ion-text>
+                <ion-chip>Chips</ion-chip>
+              </ion-card-header>
+              <ion-card-content>
+                <img class="p-img" src="assets/images/products/d-5.png" />
+                <div class="action">
+                  <ion-text class="price">$ 08.00</ion-text>
+                    <ion-button>
+                      <ion-img src="assets/icon/bag.svg"></ion-img>
+                    </ion-button> 
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </ng-template>
+          <ng-template swiperSlide>
+            <ion-card class="product yellow">
+              <ion-card-header>
+                <ion-text>Unreal Muffins</ion-text>
+                <ion-chip>Chocolates</ion-chip>
+              </ion-card-header>
+              <ion-card-content>
+                <img class="p-img" src="assets/images/p2.png" />
+                <div class="action">
+                  <ion-text class="price">$ 06.00</ion-text>
+                    <ion-button>
+                      <ion-img src="assets/icon/bag.svg"></ion-img>
+                    </ion-button> 
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </ng-template>
+          <ng-template swiperSlide>
+            <ion-card class="product green">
+              <ion-card-header>
+                <ion-text [routerLink]="['/collections']">Coconut Chips</ion-text>
+              <ion-chip>Chips</ion-chip>
+              </ion-card-header>
+              <ion-card-content>
+                <img class="p-img" [routerLink]="['/product']" src="assets/images/p3.png" />
+                <div class="action">
+                  <ion-text class="price">$ 06.00</ion-text>
+                    <ion-button>
+                      <ion-img src="assets/icon/bag.svg"></ion-img>
+                    </ion-button> 
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </ng-template>
+        </swiper>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>

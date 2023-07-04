@@ -1,0 +1,60 @@
+<div id="transactions">
+  <ion-segment [(ngModel)]="segment" mode="md">    
+  <ion-segment-button value="1" layout="icon-start">
+    <ion-icon name="repeat-outline"></ion-icon>
+    Recent Transactions
+  </ion-segment-button>
+  <ion-segment-button value="2" layout="icon-start">
+    <ion-icon name="pie-chart-outline"></ion-icon>
+    Spend Analysis
+  </ion-segment-button>
+  </ion-segment>
+  <div [ngSwitch]="segment">
+     <div *ngSwitchCase="'1'" class="ion-no-margin ion-padding-bottom">
+        <ion-card>
+          <ion-card-header>
+            <!-- <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle> -->
+            <ion-card-title>Today | 15th July, 2023</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item lines="none">
+              <span class="status"><ion-icon name="remove" color="danger"></ion-icon></span>
+              <ion-label>Transfer to <strong>Zomato</strong><span class="desc">Online food Order</span></ion-label>
+              <span class="amount">₹1,250.60</span>
+            </ion-item>
+            <ion-item lines="none">
+              <span class="status"><ion-icon name="add" color="success"></ion-icon></span>
+              <ion-label>Received via paypal from <strong>Anna</strong><span class="desc">Project Payment</span></ion-label>
+              <span class="amount">₹42,840.00</span>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <!-- <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle> -->
+            <ion-card-title>Yesterday | 15th July, 2023</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item lines="none">
+              <span class="status"><ion-icon name="remove" color="danger"></ion-icon></span>
+              <ion-label>Transfer to <strong>Nike</strong><span class="desc">Shopping</span></ion-label>
+              <span class="amount">₹13,240.00</span>
+            </ion-item>
+            <ion-item lines="none">
+              <span class="status"><ion-icon name="add" color="success"></ion-icon></span>
+              <ion-label>Received via paypal from <strong>Sam</strong><span class="desc">Project Payment</span></ion-label>
+              <span class="amount">₹12,750.00</span>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+     </div>
+     <div *ngSwitchCase="'2'" class="ion-no-margin ion-padding-bottom">
+      <ion-card>
+        <ion-card-header>
+          <!-- <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle> -->
+          <ion-card-title>Spend Analysis</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+      </div>
+  </div>
+</div>
