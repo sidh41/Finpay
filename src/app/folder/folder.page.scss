@@ -1,10 +1,16 @@
+ion-menu {
+  @media (min-width: 992px) {
+    width: 21vw;
+  }
+}
+
 ion-menu ion-content {
   --background: var(--ion-item-background, var(--ion-background-color, #fff));
 }
 
 ion-menu ion-content {
-  --padding-start: 32px;
-  --padding-end: 32px;
+  --padding-start: 16px;
+  --padding-end: 16px;
   --padding-top: 8px;
   --padding-bottom: 16px;
 }
@@ -23,7 +29,7 @@ ion-menu ion-note {
 }
 
 ion-menu ion-list#inbox-list {
-  border-bottom: 1px solid var(--ion-color-step-150, #d7d8da);
+  // border-bottom: 1px solid var(--ion-color-step-150, #d7d8da);
 
   ion-avatar {
     height: 40px;
@@ -49,7 +55,7 @@ ion-menu ion-list#labels-list ion-list-header {
 ion-menu ion-item {
   --padding-start: 10px;
   --padding-end: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   border-radius: 4px;
 }
 
@@ -58,7 +64,8 @@ ion-menu ion-item.selected {
   --background: transparent;
 }
 
-ion-menu ion-item.selected ion-icon, ion-menu ion-item.selected ion-label {
+ion-menu ion-item.selected ion-icon,
+ion-menu ion-item.selected ion-label {
   color: var(--ion-color-primary);
   font-weight: 500;
 }
@@ -82,4 +89,68 @@ ion-note {
 
 ion-item.selected {
   --color: var(--ion-color-primary);
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 12px;
+  width: 87%;
+
+  .profile {
+    ion-item {
+      --background: var(--ion-color-dark-contrast);
+      --border-radius: 16px;
+      --padding-end: 0;
+      --min-height: 70px;
+      height: 70px;
+      border-radius: 16px;
+
+      --inner-padding-end ion-avatar {
+        box-shadow: rgba(149, 157, 165, 0.12) 0px 0px 16px;
+      }
+
+      ion-label {
+        font-weight: bold;
+        color: var(--ion-color-dark);
+
+        span {
+          display: block;
+          font-weight: 500;
+          font-size: 0.8rem;
+          margin: 3px 0 0;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+
+  .cta {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: auto;
+    margin: 0 auto;
+
+    img {
+      width: 40%;
+      margin: 0 auto;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 0.9rem;
+      text-align: center;
+      line-height: 20px;
+    }
+
+    ion-button {
+      height: 50px;
+      width: -webkit-fill-available;
+      --border-radius: 16px;
+      font-weight: 600;
+      --border-width: 1px;
+      margin-bottom: 32px;
+    }
+  }
 }
