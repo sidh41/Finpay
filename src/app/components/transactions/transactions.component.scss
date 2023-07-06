@@ -3,6 +3,7 @@
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
         padding: 0px 0px 32px;
+        --background: transparent;
 
         ion-segment-button {
             text-transform: capitalize;
@@ -12,8 +13,7 @@
             --indicator-height: 0px !important;
             --background-checked: var(--ion-color-primary);
             --color-hover: var(--ion-color-primary);
-            --border-radius: 16px;
-            --background-focused: transparent;
+            border-radius: 16px;
             --border-radius: 16px;
             border-radius: 16px;
             height: 60px;

@@ -3,11 +3,41 @@
 
 .CommonDashboardPages {
     ion-header {
-        box-shadow: none;
+        box-shadow: none !important;
         --background: transparent;
 
         ion-toolbar {
             --background: transparent;
+            --min-height: 54px;
+            box-shadow: none !important;
+            --border-width: 0px !important;
+
+            ion-button, ion-menu-button {
+                --background: var(--ion-color-dark-contrast);
+                background: var(--ion-color-dark-contrast);
+                --border-radius: 16px !important;
+                border-radius: 16px;
+                --padding-start: 10px;
+                --padding-end: 10px;
+                --padding-top: 10px;
+                --padding-bottom: 10px;
+                height: 38px;
+                width: 38px;
+                margin: 0 8px;
+                --box-shadow: rgb(38 57 77 / 30%) 0px 6px 30px -14px;
+                box-shadow: rgb(38 57 77 / 30%) 0px 6px 30px -14px;
+                --color: var(--ion-color-dark);
+
+                &:last-of-type
+                {
+                    margin-right: 16px;
+                }
+
+                ion-icon {
+                    font-size: 80px;
+                    color: var(--ion-color-dark);
+                }
+            }
         }
 
         @media (min-width: 992px) {
@@ -41,10 +71,15 @@
             --inner-padding-end: 0px;
             --padding-start: 8px;
             --padding-end: 8px;
+            @media (max-width: 767px)
+            {
+                --inner-padding-top: 0px;
+            }
 
             ion-label {
                 font-size: 2.7rem;
                 font-weight: 300;
+                margin: 0;
 
                 span {
                     display: block;
@@ -131,15 +166,18 @@ ion-card.cards {
             &.swiper-slide-active {
                 transform: scale(1.05);
                 opacity: 1;
+
                 .card {
                     height: 200px;
                     max-height: 200px;
                 }
             }
-            &.swiper-slide-next, &.swiper-slide-prev
-            {
+
+            &.swiper-slide-next,
+            &.swiper-slide-prev {
                 opacity: 0.5;
             }
+
             // &.swiper-slide-prev
             // {
             //     transform: translate(97%);
@@ -199,7 +237,7 @@ ion-card.cards {
                     font-weight: 500;
                     padding: 16px 0;
 
-                    
+
 
                     h1 {
                         color: #fff;
@@ -213,8 +251,8 @@ ion-card.cards {
                         font-size: 0.75rem;
                         letter-spacing: 0.75px;
                     }
-                    &.expiry
-                    {
+
+                    &.expiry {
                         float: right;
                     }
                 }
