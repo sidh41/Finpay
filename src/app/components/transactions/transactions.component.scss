@@ -19,8 +19,16 @@
             height: 60px;
             font-weight: 600;
 
+            @media (max-width: 767px) {
+                font-size: 0.75rem;
+            }
+
             ion-icon {
                 margin-right: 12px;
+
+                @media (max-width: 767px) {
+                    margin-right: 4px;
+                }
             }
 
             &.segment-button-checked::before {
@@ -91,6 +99,10 @@
                 --padding-end: 0px;
                 --padding-bottom: 8px;
                 --background: transparent;
+
+                ion-label {
+                    white-space: break-spaces;
+                }
 
                 span {
                     &.status {

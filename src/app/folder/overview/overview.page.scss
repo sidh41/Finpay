@@ -12,7 +12,8 @@
             box-shadow: none !important;
             --border-width: 0px !important;
 
-            ion-button, ion-menu-button {
+            ion-button,
+            ion-menu-button {
                 --background: var(--ion-color-dark-contrast);
                 background: var(--ion-color-dark-contrast);
                 --border-radius: 16px !important;
@@ -28,8 +29,7 @@
                 box-shadow: rgb(38 57 77 / 30%) 0px 6px 30px -14px;
                 --color: var(--ion-color-dark);
 
-                &:last-of-type
-                {
+                &:last-of-type {
                     margin-right: 16px;
                 }
 
@@ -71,8 +71,8 @@
             --inner-padding-end: 0px;
             --padding-start: 8px;
             --padding-end: 8px;
-            @media (max-width: 767px)
-            {
+
+            @media (max-width: 767px) {
                 --inner-padding-top: 0px;
             }
 
@@ -214,6 +214,10 @@ ion-card.cards {
             ion-card-header {
                 padding: 8px 22px 0;
 
+                @media (max-width: 767px) {
+                    padding: 8px 16px 0;
+                }
+
                 ion-img {
                     width: 70px;
                 }
@@ -221,6 +225,10 @@ ion-card.cards {
 
             ion-card-content {
                 padding: 0px 16px 0 22px;
+
+                @media (max-width: 767px) {
+                    padding: 0px 16px 0 16px;
+                }
 
                 .number {
                     span {
@@ -236,6 +244,9 @@ ion-card.cards {
                     margin-right: 22px;
                     font-weight: 500;
                     padding: 16px 0;
+                    @media (max-width: 767px) {
+                        margin-right: 4px;
+                    }
 
 
 
