@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import SwiperCore, { Autoplay, Keyboard, Pagination, Scrollbar, Zoom } from 'swiper';
 SwiperCore.use([Autoplay, Keyboard, Pagination, Scrollbar, Zoom]);
+import { DarkModeService } from "angular-dark-mode";
 
 @Component({
   selector: 'app-overview',
@@ -10,8 +11,14 @@ SwiperCore.use([Autoplay, Keyboard, Pagination, Scrollbar, Zoom]);
 })
 export class OverviewPage implements OnInit {
 
-  constructor() { }
+  darkMode$ = this.darkModeService.darkMode$;
 
+  constructor(private darkModeService: DarkModeService) {}
+
+  onToggle(): void {
+    this.darkModeService.toggle();
+  }
+  
   ngOnInit() {
   }
 

@@ -131,7 +131,7 @@
         .shape-4 {
             width: 70em;
             height: 40em;
-            background-color: #8E7DFF;
+            background-color: var(--ion-color-primary); // #8E7DFF
             margin-left: auto;
             position: fixed;
             top: 40em;
@@ -172,7 +172,7 @@
         .shape-6 {
             width: 70em;
             height: 45em;
-            background-color: #FFAFA1;
+            background-color: var(--ion-color-orange); // #FFAFA1
             border-radius: 999em;
             margin-left: auto;
             position: absolute;
@@ -183,18 +183,18 @@
         }
     }
 
-    .background-noise {
-        z-index: 0;
-        width: 100%;
-        height: 100%;
-        opacity: .3;
-        /* background-image: url(https://assets.website-files.com/5fa298c…/642ebe2…_noise.png); */
-        background-position: 0 0;
-        background-size: auto;
-        position: absolute;
-        top: 0%;
-        bottom: 0%;
-        left: 0%;
-        right: 0%;
-    }
+    // .background-noise {
+    //     z-index: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     opacity: .3;
+    //     /* background-image: url(https://assets.website-files.com/5fa298c…/642ebe2…_noise.png); */
+    //     background-position: 0 0;
+    //     background-size: auto;
+    //     position: absolute;
+    //     top: 0%;
+    //     bottom: 0%;
+    //     left: 0%;
+    //     right: 0%;
+    // }
 }
