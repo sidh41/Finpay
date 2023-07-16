@@ -103,6 +103,11 @@
                 --box-shadow: rgb(38 57 77 / 30%) 0px 6px 30px -14px;
                 // box-shadow: rgb(38 57 77 / 30%) 0px 6px 30px -14px;
 
+                &:last-of-type {
+                    margin: 0 0px 0 12px;
+                }
+
+
                 ion-icon {
                     font-size: 64px;
                     color: var(--ion-color-dark);
@@ -322,4 +327,18 @@ ion-menu::part(backdrop) {
 
 .toggle:checked+.toggle-label .moon {
     top: 0;
+}
+
+ion-icon[name="notifications"]::before {
+    content: "";
+    height: 6px;
+    width: 6px;
+    background: var(--ion-color-danger);
+    border-radius: 50%;
+    position: absolute;
+    top: 18px;
+    right: 0px;
+}
+ion-header ion-icon[name="notifications"]::before {
+    top: 27px;
 }

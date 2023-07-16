@@ -10,8 +10,8 @@ export class FolderPage implements OnInit {
   // public folder!: string;
   // private activatedRoute = inject(ActivatedRoute);
   public appPages = [
-    { title: 'Overview', url: '/folder/overview', icon: 'mail' },
-    { title: 'Reports', url: '/folder/reports', icon: 'paper-plane' },
+    { title: 'Overview', url: '/folder/overview', icon: 'grid' },
+    { title: 'Reports', url: '/folder/reports', icon: 'bar-chart' },
     { title: 'Card', url: '/folder/card', icon: 'card' },
     { title: 'Support', url: '/folder/support', icon: 'call' },    
   ];  
