@@ -94,6 +94,10 @@
         ion-card-content {
             padding: 0 0 16px;
 
+            &:last-of-type {
+                padding: 0;
+            }
+
             ion-item {
                 --padding-start: 0px;
                 --padding-end: 0px;
@@ -141,5 +145,14 @@
         }
 
 
+    }
+}
+
+.view-more {
+    display: flex;
+    justify-content: center;
+
+    ion-icon {
+        color: var(--ion-color-dark);
     }
 }
